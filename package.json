@@ -1,0 +1,28 @@
+{
+  "name": "todo-app-vue-typescript",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "@vitejs/plugin-vue-jsx": "^1.3.3",
+    "@vue/test-utils": "^2.0.0-rc.18",
+    "c8": "^7.11.0",
+    "happy-dom": "^2.28.0",
+    "less": "^4.1.2",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vitest": "^0.2.1",
+    "vue-tsc": "^0.29.8"
+  },
+  "license": "MIT"
+}
