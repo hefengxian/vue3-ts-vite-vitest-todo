@@ -5,6 +5,6 @@ import App from './App'
 
 test('Mount App', () => {
   const wrapper = mount(App)
-  const txt = wrapper.get('h1').text()
-  expect(txt).toBe('Hello World.')
+  const txt = wrapper.get('h1.title').text()
+  expect(txt).toBe('Todo App')
 })
