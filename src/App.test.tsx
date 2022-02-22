@@ -1,10 +1,16 @@
-// @ts-ignore
 import { mount } from '@vue/test-utils'
-import { test, expect } from 'vitest'
+import { it } from 'vitest'
 import App from './App'
+import { store } from './Storage'
+import { uuid } from './Utils'
 
-test('Mount App', () => {
-  const wrapper = mount(App)
-  const txt = wrapper.get('h1.title').text()
-  expect(txt).toBe('Todo App')
+store.state.todos = [
+    {uuid: uuid(), text: 'Todo Item A', done: false},
+    {uuid: uuid(), text: 'Todo Item B', done: false},
+    {uuid: uuid(), text: 'Todo Item C', done: false},
+]
+
+it('will render without crashing', () => {
+  const app = mount(App)
+  app.unmount()
 })
