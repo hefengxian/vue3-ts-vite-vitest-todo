@@ -3,7 +3,7 @@ import { expect, it } from "vitest"
 import { uuid } from "../Utils"
 import TodoList from "./TodoList"
 
-const todos: Todo[] = [
+const todos = [
   {
     uuid: uuid(),
     text: 'Todo A',
