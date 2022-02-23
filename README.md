@@ -17,7 +17,7 @@ Todo App is a typical start-up project, especially for some new frameworks. mayb
 - TypeScript
 - Pure TS/TSX no SFC `*.vue`
 - Vite for build tool
-- Vitest as the testing framework
+- Learn/Practice how to write tests (Vitest as the testing framework)
 
 So i write one by myself, to practice new Vue3 new APIs, new build tools...
 
