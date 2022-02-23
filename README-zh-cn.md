@@ -4,7 +4,7 @@
 
 废话不多说，先看东西
 
-在线例子: [https://hefengxian.github.io/ts-vue-vitest-todo-app/](https://hefengxian.github.io/ts-vue-vitest-todo-app/)
+在线例子: [https://hefengxian.github.io/vue3-ts-vite-vitest-todo/](https://hefengxian.github.io/vue3-ts-vite-vitest-todo/)
 
 截图
 

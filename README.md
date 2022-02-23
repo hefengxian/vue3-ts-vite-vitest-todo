@@ -3,7 +3,7 @@
 
 Talk is cheap, show me the Demo
 
-Live demo: [https://hefengxian.github.io/ts-vue-vitest-todo-app/](https://hefengxian.github.io/ts-vue-vitest-todo-app/)
+Live demo: [https://hefengxian.github.io/vue3-ts-vite-vitest-todo/](https://hefengxian.github.io/vue3-ts-vite-vitest-todo/)
 
 ![Todo App Screenshot](docs/assets/Todo_App_Screenshot.png)
 
