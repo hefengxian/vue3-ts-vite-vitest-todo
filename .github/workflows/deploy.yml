@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
           with:
-            nodev-version: '14'
+            node-version: '14'
 
       - name: Install Dependencies
         run: yarn install
