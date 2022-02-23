@@ -18,6 +18,7 @@ export default defineComponent({
       done: (list: Todo[]) => list.filter(t => t.done),
     }
     const filterdTodos = computed(() => filters[filterType.value](store.state.todos))
+    const activeTodoCount = computed(() => filters['active'](store.state.todos).length)
 
     return () => (
       <>
@@ -25,7 +26,7 @@ export default defineComponent({
         <NewTodoInput />
         <TodoList todos={filterdTodos.value} />
         <UnderBar
-          filteredCount={filterdTodos.value.length}
+          filteredCount={activeTodoCount.value}
           v-model:filterType={filterType.value} />
         <Copyright />
       </>
