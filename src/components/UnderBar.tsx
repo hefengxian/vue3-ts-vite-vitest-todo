@@ -24,14 +24,14 @@ export default defineComponent({
 
     return () => (
       <div class="footer">
-        <div class="info">{props.filteredCount}/{todos.length}</div>
+        <div class="info">{props.filteredCount}/{store.state.todos.length}</div>
         <div class="filters">
           <button class={props.filterType === 'all' ? 'selected' : ''} onClick={() => filterChange('all')}>All</button>
           <button class={props.filterType === 'active' ? 'selected' : ''} onClick={() => filterChange('active')}>Active</button>
           <button class={props.filterType === 'done' ? 'selected' : ''} onClick={() => filterChange('done')}>Done</button>
         </div>
         <div class="clear-all">
-          <button onClick={() => store.state.todos = todos.filter(t => !t.done)}>Clear Done</button>
+          <button onClick={() => store.state.todos = store.state.todos.filter(t => !t.done)}>Clear Done</button>
         </div>
       </div>
     )
