@@ -3,7 +3,7 @@ import { store } from '../Storage'
 import { uuid } from '../Utils'
 
 export default defineComponent({
-  setup(props, context) {
+  setup() {
     const todos = store.state.todos
     const newTodo = ref('')
     function addNewTodo(e: KeyboardEvent) {
@@ -18,29 +18,32 @@ export default defineComponent({
 
     const allDone = computed({
       get: () => {
-        if (todos.length > 0
-          && todos.filter(t => t.done).length === todos.length) {
+        if (
+          todos.length > 0 &&
+          todos.filter(t => t.done).length === todos.length
+        ) {
           return true
         }
         return false
       },
       set(val: boolean) {
-        todos.forEach(t => t.done = val)
-      }
+        todos.forEach(t => (t.done = val))
+      },
     })
 
     return () => (
       <div class="new-todo">
-        <input class="toggle-all" type="checkbox" v-model={ allDone.value }/>
+        <input class="toggle-all" type="checkbox" v-model={allDone.value} />
         <input
-          class='new-todo-input'
-          type='text'
+          class="new-todo-input"
+          type="text"
           autofocus
-          autocomplete='off'
-          placeholder='What needs to be done?'
-          v-model={ newTodo.value }
-          onKeyup={ addNewTodo } />
+          autocomplete="off"
+          placeholder="What needs to be done?"
+          v-model={newTodo.value}
+          onKeyup={addNewTodo}
+        />
       </div>
     )
-  }
+  },
 })

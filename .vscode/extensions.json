@@ -1,6 +1,3 @@
 {
-  "recommendations": [
-    "johnsoncodehk.volar",
-    "editorconfig.editorconfig"
-  ]
+  "recommendations": ["johnsoncodehk.volar", "editorconfig.editorconfig"]
 }

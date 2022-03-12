@@ -13,6 +13,6 @@ export default defineConfig({
     environment: 'happy-dom',
     transformMode: {
       web: [/.[tj]sx$/],
-    }
-  }
+    },
+  },
 })

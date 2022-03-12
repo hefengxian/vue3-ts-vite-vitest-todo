@@ -1,6 +1,6 @@
-import { mount } from "@vue/test-utils"
-import { expect, test } from "vitest"
-import AppHeader from "./AppHeader"
+import { mount } from '@vue/test-utils'
+import { expect, test } from 'vitest'
+import AppHeader from './AppHeader'
 
 const wrapper = mount(AppHeader)
 

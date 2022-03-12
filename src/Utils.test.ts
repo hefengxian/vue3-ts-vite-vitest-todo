@@ -8,7 +8,9 @@ describe('UUID', () => {
       results.push(uuid())
     }
     results.forEach(v => {
-      expect(v).toMatch(/^[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789]{8}$/)
+      expect(v).toMatch(
+        /^[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789]{8}$/
+      )
     })
   })
 
@@ -18,8 +20,9 @@ describe('UUID', () => {
       results.push(uuid(16))
     }
     results.forEach(v => {
-      expect(v).toMatch(/^[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789]{16}$/)
+      expect(v).toMatch(
+        /^[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789]{16}$/
+      )
     })
   })
 })
-

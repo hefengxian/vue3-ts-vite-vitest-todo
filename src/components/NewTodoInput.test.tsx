@@ -1,6 +1,6 @@
-import { mount } from "@vue/test-utils"
-import { expect, test } from "vitest"
-import NewTodoInput from "./NewTodoInput"
+import { mount } from '@vue/test-utils'
+import { expect, test } from 'vitest'
+import NewTodoInput from './NewTodoInput'
 import { store } from '../Storage'
 
 test('Should be render <NewTodoInput />', async () => {

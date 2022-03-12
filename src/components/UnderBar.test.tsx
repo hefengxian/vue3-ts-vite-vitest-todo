@@ -1,22 +1,24 @@
-import { mount } from "@vue/test-utils"
-import { expect, it, test } from "vitest"
-import { store } from "../Storage"
-import { uuid } from "../Utils"
-import UnderBar from "./UnderBar"
+import { mount } from '@vue/test-utils'
+import { expect, it, test } from 'vitest'
+import { store } from '../Storage'
+import { uuid } from '../Utils'
+import UnderBar from './UnderBar'
 
 store.state.todos = [
-  {uuid: uuid(), text: 'Active', done: false},
-  {uuid: uuid(), text: 'Done', done: true},
+  { uuid: uuid(), text: 'Active', done: false },
+  { uuid: uuid(), text: 'Done', done: true },
 ]
 
 const wrapper = mount(UnderBar, {
-  props: { filteredCount: 1, filterType: 'active' }
+  props: { filteredCount: 1, filterType: 'active' },
 })
 
 it('should render properly', async () => {
   expect(wrapper.find('.info').text()).toBe('1/2')
   expect(wrapper.findAll('.filters button')).toHaveLength(3)
-  expect(wrapper.findAll('.filters button')[1].attributes().class).toBe('selected')
+  expect(wrapper.findAll('.filters button')[1].attributes().class).toBe(
+    'selected'
+  )
   expect(wrapper.find('.clear-all button').text()).toBe('Clear Done')
 })
 

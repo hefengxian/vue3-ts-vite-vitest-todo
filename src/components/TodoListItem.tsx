@@ -1,5 +1,5 @@
-import { defineComponent, PropType, ref } from "vue"
-import { store } from "../Storage"
+import { defineComponent, PropType, ref } from 'vue'
+import { store } from '../Storage'
 
 export default defineComponent({
   name: 'TodoListItem',
@@ -7,7 +7,7 @@ export default defineComponent({
     todo: {
       type: Object as PropType<Todo>,
       required: true,
-    }
+    },
   },
   setup(props) {
     const todo = props.todo
@@ -20,7 +20,7 @@ export default defineComponent({
     const handleTodoTextKeyDown = (e: KeyboardEvent) => {
       if (e.key == 'Enter' || e.key == 'Escape') {
         // Remove focus
-        (e.target as HTMLElement).blur()
+        ;(e.target as HTMLElement).blur()
         currentEdit.value = null
         e.preventDefault()
       }
@@ -30,23 +30,23 @@ export default defineComponent({
       todo.text = (e.target as HTMLElement).innerText
     }
     return () => (
-      <li class='todo-item'>
-        <input
-          v-model={todo.done}
-          type="checkbox"
-          class='toggle' />
+      <li class="todo-item">
+        <input v-model={todo.done} type="checkbox" class="toggle" />
         <div class={todo.done ? 'view done' : 'view'}>
           <span
             class="todo-text"
             onClick={handleTodoTextClick}
             onKeydown={handleTodoTextKeyDown}
             onFocusout={handleTodoTextFocusout}
-            contenteditable={currentEdit.value == todo}>{todo.text}</span>
+            contenteditable={currentEdit.value == todo}
+          >
+            {todo.text}
+          </span>
         </div>
-        <span
-          onClick={ () => store.removeTodo(todo) }
-          class='destroy'>&times;</span>
+        <span onClick={() => store.removeTodo(todo)} class="destroy">
+          &times;
+        </span>
       </li>
     )
-  }
+  },
 })

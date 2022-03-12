@@ -1,19 +1,20 @@
 import { reactive, watch } from 'vue'
 
 const emptyState: AppState = {
-  todos: []
+  todos: [],
 }
 
 const LOCAL_STORAGE_KEY = 'my_todo_app'
 
 const localStore = {
   fetch(): AppState {
-    const storedStr = localStorage.getItem(LOCAL_STORAGE_KEY) || JSON.stringify(emptyState)
+    const storedStr =
+      localStorage.getItem(LOCAL_STORAGE_KEY) || JSON.stringify(emptyState)
     return JSON.parse(storedStr) as AppState
   },
   save(appState: AppState) {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(appState))
-  }
+  },
 }
 
 const store = {
@@ -28,11 +29,13 @@ const store = {
   },
 }
 
-watch(store.state, (newVal) => {
-  // console.log('Write to localStorage: ', newVal)
-  localStore.save(newVal)
-}, { deep: true })
+watch(
+  store.state,
+  newVal => {
+    // console.log('Write to localStorage: ', newVal)
+    localStore.save(newVal)
+  },
+  { deep: true }
+)
 
-export {
-  store,
-}
+export { store }

@@ -21,18 +21,27 @@ store.state.todos = [
 ]
 
 const wrapper = mount(() => (
-  <ul>{store.state.todos.map(todo => <TodoListItem todo={todo} />)}</ul>
+  <ul>
+    {store.state.todos.map(todo => (
+      <TodoListItem todo={todo} />
+    ))}
+  </ul>
 ))
 
 test('TodoItem should be render', async () => {
   const items = wrapper.findAll('.todo-text')
   expect(items.length).toBe(2)
-  expect(items.map(item => item.element.textContent)).toEqual(store.state.todos.map(todo => todo.text))
+  expect(items.map(item => item.element.textContent)).toEqual(
+    store.state.todos.map(todo => todo.text)
+  )
 })
 
 test('CSS classes should be set properly', async () => {
   const items = wrapper.findAll('.todo-item')
-  expect(items[1].element.children[1].className, '2nd item should has class `done`').toBe('view done')
+  expect(
+    items[1].element.children[1].className,
+    '2nd item should has class `done`'
+  ).toBe('view done')
 })
 
 test('Toggle checkbox should work', async () => {
@@ -55,11 +64,16 @@ test('Toggle checkbox should work', async () => {
 })
 
 test('Edit Todo text should work', async () => {
-  const editableTodoText = wrapper.find('.todo-text') as DOMWrapper<HTMLSpanElement>
+  const editableTodoText = wrapper.find(
+    '.todo-text'
+  ) as DOMWrapper<HTMLSpanElement>
 
   // Click will enter edit model
   await editableTodoText.trigger('click')
-  expect(editableTodoText.attributes().contenteditable, 'Property contenteditable shoud be "true"').toBe('true')
+  expect(
+    editableTodoText.attributes().contenteditable,
+    'Property contenteditable shoud be "true"'
+  ).toBe('true')
 
   // Enter key will exit edit model
   await editableTodoText.trigger('click')
