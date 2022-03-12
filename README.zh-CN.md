@@ -1,4 +1,4 @@
-[English Version](README.md)
+简体中文 | [English](README.md)
 
 # Todo App
 
@@ -10,12 +10,11 @@
 
 ![Todo App Screenshot](docs/assets/Todo_App_Screenshot.png)
 
-
 ## 为什么
 
 Todo App 用来熟练某个新技术、新框架的非常好的上手项目；也是个烂大街的例子，或许大家早就会使用熟悉的语言、框架去实现这个例子了（Vue 官方都有一个）。当我决定学习、使用 Vue3 的时候，我想使用如下新的框架、语言、工具、API 来实现：
 
-- 纯 Composition API 而不使用选项式 API 
+- 纯 Composition API 而不使用选项式 API
 - Reactive API 在组件、Vue 实例外部实现响应式
 - TypeScript
 - 纯 TS/TSX 而不使用 Vue SFC `*.vue`
@@ -23,7 +22,6 @@ Todo App 用来熟练某个新技术、新框架的非常好的上手项目；�
 - 学习、练习如何编写测试（使用 Vitest）
 
 翻编了 Google 也没找到一个完整的上手、练习的例子。所以我自己写了一个 Todo App，来练习新的 API、构建工具。希望有和我类似需求的人可以从这个项目快速的学习、使用 Vue3 新的 API 和新构建工具带来的开发体验的改进
-
 
 ## 开发
 
@@ -51,11 +49,9 @@ yarn test
 yarn build
 ```
 
-
 ## 推荐开发工具
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-
 
 ## License
 

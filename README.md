@@ -1,4 +1,5 @@
-[中文](README-zh-cn.md)
+English | [简体中文](README.zh-CN.md)
+
 # Todo App
 
 Talk is cheap, show me the Demo
@@ -6,7 +7,6 @@ Talk is cheap, show me the Demo
 Live demo: [https://hefengxian.github.io/vue3-ts-vite-vitest-todo/](https://hefengxian.github.io/vue3-ts-vite-vitest-todo/)
 
 ![Todo App Screenshot](docs/assets/Todo_App_Screenshot.png)
-
 
 ## Why
 
@@ -22,7 +22,6 @@ Todo App is a typical start-up project, especially for some new frameworks. mayb
 So i write one by myself, to practice new Vue3 new APIs, new build tools...
 
 Hope it will helpful for those people like me, to experience new APIs and tools that bring to you
-
 
 ## Dev
 
@@ -53,7 +52,6 @@ yarn build
 ## Recommended IDE Setup
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-
 
 ## License
 
