@@ -1,6 +1,16 @@
 简体中文 | [English](README.md)
 
-# Todo App
+<p align="center">
+    <img alt="logo" src="src/assets/logo.png" width="120">
+</p>
+
+<h1 align="center">Todo App</h1>
+
+<p align="center">
+  <img src="https://github.com/hefengxian/vue3-ts-vite-vitest-todo/actions/workflows/deploy.yml/badge.svg" alt="CI Status">
+</p>
+
+---
 
 废话不多说，先看东西
 
